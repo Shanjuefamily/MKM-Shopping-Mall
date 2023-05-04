@@ -4,7 +4,7 @@
  * building robust, powerful web applications using React + Laravel.
  */
 
-import './bootstrap';
+import "./bootstrap";
 import "../css/app.css";
 
 /**
@@ -13,15 +13,18 @@ import "../css/app.css";
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 import ReactDOM from "react-dom/client";
-import React from 'react';
-import FrontendLayout from './components/FrontendLayout';
+import React from "react";
+import FrontendLayout from "./components/FrontendLayout";
+import { BrowserRouter as Router } from "react-router-dom";
 
 if (document.getElementById("app")) {
     const Index = ReactDOM.createRoot(document.getElementById("app"));
 
     Index.render(
         <React.StrictMode>
-            <FrontendLayout />
+            <Router>
+                <FrontendLayout />
+            </Router>
         </React.StrictMode>
     );
 }
